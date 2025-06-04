@@ -1,0 +1,29 @@
+# --- Web stack ---
+fastapi~=0.110.0                       # async web framework
+pydantic-settings~=2.2
+strawberry-graphql[fastapi]~=0.215.0   # GraphQL router that plugs into FastAPI
+uvicorn[standard]~=0.29.0              # ASGI server (used behind Gunicorn)
+gunicorn~=22.0.0                       # process manager for multiple workers
+email-validator==2.2.0
+passlib[bcrypt]
+strawberry-graphql[fastapi]
+
+# --- Data layer ---
+SQLAlchemy~=2.0.30                     # ORM / core
+sqlalchemy==2.0.41
+asyncpg==0.30.0                        # macOS/ManyLinux wheels available                         # async Postgres driver
+alembic~=1.13.1                        # DB migrations
+redis~=5.0.4                           # Redis Python client
+aioredis~=2.0.1                        # async Redis interface (wraps redis-py >=5)
+
+# --- Domain / auth / utils ---
+pydantic==2.10.5                       # pulls pydantic-core 2.18.2 wheel
+python-dotenv~=1.0.1                   # load .env files for config
+passlib[bcrypt]~=1.7.4                 # secure password hashing (bcrypt)
+python-jose[cryptography]~=3.3.0       # JWT creation / verification
+tenacity~=8.2.3                        # retry helpers for transient errors
+
+# --- Payments (Stripe) ---
+stripe~=9.8.0                          # REST/async client for Stripe API
+
+uvicorn[standard]
