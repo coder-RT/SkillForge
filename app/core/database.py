@@ -30,3 +30,14 @@ class Base(DeclarativeBase):
 async def get_db() -> AsyncGenerator[AsyncSession, None]:
     async with AsyncSessionLocal() as session:
         yield session
+        
+# app/core/database.py  (bottom of file)
+from contextlib import asynccontextmanager
+
+@asynccontextmanager
+async def lifespan(app):
+    """Create all tables on startup (dev only)."""
+    async with engine.begin() as conn:
+        await conn.run_sync(Base.metadata.create_all)   # CREATE TABLE IF NOT EXISTS ...
+    yield
+    # no teardown needed

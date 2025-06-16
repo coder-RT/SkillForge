@@ -36,8 +36,9 @@ async def register_user(
     svc: UserService = Depends(get_user_service),
 ):
     user = await svc.register(
-        email=payload.email,
-        password=payload.password,
-        roles=set(payload.roles),
+        # email=payload.email,
+        # password=payload.password,
+        # roles=set(payload.roles),
+        payload
     )
     return user
