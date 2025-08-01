@@ -1,0 +1,68 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+*.sw?
+
+# Logs & runtime files
+*.log
+*.pid
+*.seed
+*.tmp
+
+# Secret/config
+.env
+*.local
+*.key
+*.crt
+
+# Compiled/built output
+/dist
+/build
+/out
+*.o
+*.so
+*.dll
+*.exe
+
+# Dependency caches
+node_modules/
+.venv/
+.idea/
+.vscode/
+
+
+# Byte-code & caching
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual-env folders
+.venv/
+env/
+venv/
+
+# Packaging
+*.egg-info/
+*.egg
+dist/
+build/
+
+
+# Dependency tree
+node_modules/
+
+# Bundler output
+coverage/
+dist/
+lib/
+*.tsbuildinfo
+
+
+# Build system
+/.gradle/
+/target/
+/build/
+
+# IDEs
+*.iml
+*.class
