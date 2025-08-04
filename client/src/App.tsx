@@ -52,13 +52,22 @@
 
 // export default App;
 
+import Navbar from './components/Navbar';
 import Books from "./components/Books";
 import Home from "./components/Home";
 
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 const App = () => (
   <div style={{ maxWidth: 1800 }}>
-    <Home message="Welcome to the Bible" />
-    <Books />
+    <BrowserRouter>
+      <Navbar />
+
+      <Routes>
+        <Route path="/" element={<Home message="Welcome to the Bible" />} />
+        <Route path="/books" element={<Books />} />
+      </Routes>
+    </BrowserRouter>
   </div>
 );
 
