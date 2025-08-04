@@ -1,0 +1,21 @@
+@import "tailwindcss";
+@import "react-day-picker/style.css";
+
+@theme {
+    
+    --color-branding-50: #f0f9ff;
+    --color-branding-100: #dff2fe;
+    --color-branding-200: #b8e6fe;
+    --color-branding-300: #74d4ff;
+    --color-branding-400: #00bcff;
+    --color-branding-500: #00a6f4;
+    --color-branding: #0084d1;
+    --color-branding-700: #0069a8;
+    --color-branding-800: #00598a;
+    --color-branding-900: #024a70;
+}
+
+.rdp-root {
+    --rdp-accent-color: #0084d1;
+    --rdp-accent-background-color: #0084d1;
+}
